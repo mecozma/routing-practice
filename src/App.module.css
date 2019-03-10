@@ -1,0 +1,26 @@
+.Nav {
+  border: 1px solid red;
+}
+
+.Nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Nav ul li {
+  display: inline-block;
+  margin: 20px;
+}
+
+.Nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.Nav a:hover,
+.Nav a:active {
+  color: orange;
+}
