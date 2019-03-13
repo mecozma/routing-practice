@@ -21,6 +21,12 @@
 }
 
 .Nav a:hover,
+.Nav a:active,
+.Nav a.active {
+  color: orange;
+}
+
+.Nav a:hover,
 .Nav a:active {
   color: orange;
 }
