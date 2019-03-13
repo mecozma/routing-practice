@@ -4,6 +4,7 @@ import { BrowserRouter, Route, NavLink } from "react-router-dom";
 import "./App.css";
 import Courses from "./containers/Courses/Courses";
 import Users from "./containers/Users/Users";
+import Course from "./containers/Course/Course";
 
 class App extends Component {
   render() {
@@ -65,6 +66,7 @@ class App extends Component {
           </ol>
           <Route path="/courses" component={Courses} />
           <Route path="/users" component={Users} />
+          <Route path="/:id" component={Course} />
         </div>
       </BrowserRouter>
     );
