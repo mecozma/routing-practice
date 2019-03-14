@@ -64,9 +64,9 @@ class App extends Component {
               page)
             </li>
           </ol>
-          <Route path="/courses" component={Courses} />
+          <Route path="/courses" exact component={Courses} />
           <Route path="/users" component={Users} />
-          <Route path="/:id" component={Course} />
+          <Route path="/courses/:id/:title" component={Course} />
         </div>
       </BrowserRouter>
     );
