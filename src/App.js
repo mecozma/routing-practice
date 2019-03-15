@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  NavLink,
+  Switch,
+  Redirect
+} from "react-router-dom";
 
 import "./App.css";
 import Courses from "./containers/Courses/Courses";
@@ -14,14 +20,15 @@ class App extends Component {
             <nav className="Nav">
               <ul>
                 <li>
-                  <NavLink 
-                    exact 
+                  <NavLink
+                    exact
                     activeClassName="my-style"
                     activeStyle={{
                       color: "pink",
                       textDecoration: "underline"
                     }}
-                    to="/">
+                    to="/"
+                  >
                     Home
                   </NavLink>
                 </li>
@@ -63,8 +70,11 @@ class App extends Component {
               page)
             </li>
           </ol>
-          <Route path="/courses" component={Courses} />
-          <Route path="/users" component={Users} />
+          <Switch>
+            <Route path="/courses" component={Courses} />
+            <Route path="/users" component={Users} />
+            <Redirect from="/all-courses" to="/courses" />
+          </Switch>
         </div>
       </BrowserRouter>
     );
